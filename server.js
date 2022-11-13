@@ -42,3 +42,29 @@ app.post('/api/notes', (req, res) => {
     }
     newData.id = create_UUID();
 
+    // Adding the new data to our object
+    database.notes.push(newData);
+
+    // Writing to our JSON file
+    let noteContent = JSON.stringify(database);
+    fs.writeFile('./db/db.json', noteContent, (err) => {
+        // Error checking
+        if (err) throw err;
+        console.log("New data added");
+    });
+    res.status(200).send('')
+})
+
+//Create route to delete notes
+app.delete(`/api/notes/:id`, (req, res) => {
+    let data = fs.readFileSync('./db/db.json');
+    let database = JSON.parse(data);
+
+    // Iterating through every note and if it matches the id, then it will be deleted
+    for (let i = 0; i < database.notes.length; i++) {
+        if (database.notes[i].id === req.params.id) {
+            database.notes.splice(i, 1);
+            //After deleting the first item, we no longer need to keep looping 
+            break;
+        }
+    }
