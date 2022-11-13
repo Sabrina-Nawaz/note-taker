@@ -68,3 +68,15 @@ app.delete(`/api/notes/:id`, (req, res) => {
             break;
         }
     }
+    let noteContent = JSON.stringify(database);
+    fs.writeFile('./db/db.json', noteContent, (err) => {
+        // Error checking
+        if (err) throw err;
+        console.log("New data added");
+    });
+    res.status(200).send('')
+});
+//Starts server 
+app.listen(PORT, () =>
+    console.log(`Example app listening at http://localhost:${PORT}`)
+);
