@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 //Initialize express app and define PORT
 const app = express();
@@ -30,17 +31,8 @@ app.post('/api/notes', (req, res) => {
 
     // Defining new data to be added
     let newData = req.body;
-    //Function to generate ids for notes 
-    function create_UUID() {
-        var dt = new Date().getTime();
-        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            var r = (dt + Math.random() * 16) % 16 | 0;
-            dt = Math.floor(dt / 16);
-            return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-        });
-        return uuid;
-    }
-    newData.id = create_UUID();
+    //Need to install npm install uuid in order to use the function to generate ids for new notes 
+    newData.id = uuidv4();
 
     // Adding the new data to our object
     database.notes.push(newData);
