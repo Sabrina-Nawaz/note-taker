@@ -21,7 +21,11 @@
 
 ## Usage & Installation
 
-  To use the program, you need to run the `npm i` command in the terminal to download all dependencies. In order for the server to automatically restart rather than having to do it manually, you can enter the `npm run server` for `nodemon` to run and to listen to the PORT. Lastly, for IDs to generate for new notes entered, you will need to install `uuid` by entering the command `npm install uuid`. Once this is done, you will open the index.html file which will bring you to a landing page. On the landing page, you click on "Get Started" to start making notes! 
+  To use the program, you need to run the `npm i` command in the terminal to download all dependencies. In order for the server to automatically restart rather than having to do it manually, you can enter the `npm run server` for `nodemon` to run and to listen to the PORT. Lastly, for IDs to generate for new notes entered, you will need to install `uuid` by entering the command `npm install uuid`. Once this is done, you will open the index.html file which will bring you to a landing page. On the landing page, you click on "Get Started" to start making notes. 
+  
+<img width="1437" alt="Screenshot 2022-11-15 at 11 29 10 AM" src="https://user-images.githubusercontent.com/61954667/201974515-21732af4-7320-4a97-91cb-a2a71c97d77f.png">
+<img width="1430" alt="Screenshot 2022-11-15 at 11 30 00 AM" src="https://user-images.githubusercontent.com/61954667/201974663-0f2854da-d8a4-42f3-b1b7-7fe3d1a25e55.png">
+<img width="1432" alt="Screenshot 2022-11-15 at 11 30 17 AM" src="https://user-images.githubusercontent.com/61954667/201974677-d161b7b8-e63d-4abc-8417-f1f6ae202383.png">
 
 ## License
 Copyright <2022 Sabrina Nawaz> <COPYRIGHT>
