@@ -10,6 +10,12 @@
 
   The Note Taker is an application that was built from the backend, using Express.js and connected to the front-end. The purpose of this program is so that it can write and save notes, retrieving note data from a JSON file. 
 
+## Links
+
+  >Deployed App on Heroku: https://sabrina-note-taker.herokuapp.com/
+
+  >GitHub Repo: https://github.com/Sabrina-Nawaz/note-taker
+  
 ## Table of Contents
 
   * [Usage & Installation](#usage) 
